@@ -1,13 +1,14 @@
-import { BrowserRouter, Routes, Route, useHistory } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IntroPage from "./IntroPage";
-import Game from "./component/Game";
+import Game from "./Game";
 
 export default function HomePage() {
-  const history = useHistory();
+  // const history = useHistory();
   return (
+    // <IntroPage />
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />}>
+        <Route path="/" element={<IntroPage />}>
           <Route path="preference" element={<Game />} />
         </Route>
       </Routes>
