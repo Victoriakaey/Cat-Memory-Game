@@ -2,15 +2,12 @@
 import { TypeAnimation } from "react-type-animation";
 
 export default function Type({ words }) {
+  // TODO change it so that it's not hard-coded
+  // const
   return (
     <p>
       <TypeAnimation
-        sequence={[
-          "Welcome to the card matching game!",
-          1000,
-          "Please press the button to select your preference",
-          1000,
-        ]}
+        sequence={[words[0], 1000, words[1], 1000]}
         speed={50}
         style={{ fontSize: "1em" }}
       />

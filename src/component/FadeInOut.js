@@ -1,8 +1,8 @@
 import "./FadeInOut.css";
 import { useEffect, useState } from "react";
 
-const FADE_INTERVAL_MS = 2000;
-const WORD_CHANGE_INTERVAL_MS = FADE_INTERVAL_MS * 2;
+const fadeInterval = 2000;
+const wordChangeInterval = fadeInterval * 2;
 
 export default function FadeInOut({ words }) {
   const [fadeProp, setFadeProp] = useState("fade-in");
@@ -11,14 +11,14 @@ export default function FadeInOut({ words }) {
   useEffect(() => {
     const fadeTimeout = setInterval(() => {
       fadeProp === "fade-in" ? setFadeProp("fade-out") : setFadeProp("fade-in");
-    }, FADE_INTERVAL_MS);
+    }, fadeInterval);
     return () => clearInterval(fadeTimeout);
   }, [fadeProp]);
 
   useEffect(() => {
     const wordTimeout = setInterval(() => {
       setWordOrder((prevWordOrder) => (prevWordOrder + 1) % words.length);
-    }, WORD_CHANGE_INTERVAL_MS);
+    }, wordChangeInterval);
 
     return () => clearInterval(wordTimeout);
   }, []);

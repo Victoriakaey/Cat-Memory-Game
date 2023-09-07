@@ -1,17 +1,16 @@
-import "./HomePage.css";
-import Button from "@mui/material-next/Button";
-// import FadeInOut from "./FadeInOut";
-import Type from "./Type";
-
-const words = [
-  "Welcome to the card matching game",
-  "Please press the button to select your preference",
-];
+import { BrowserRouter, Routes, Route, useHistory } from "react-router-dom";
+import IntroPage from "./IntroPage";
+import Game from "./component/Game";
 
 export default function HomePage() {
+  const history = useHistory();
   return (
-    <>
-      <Type words={words} />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />}>
+          <Route path="preference" element={<Game />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

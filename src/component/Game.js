@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
 import "./Game.css";
+import { useEffect, useState } from "react";
+import SingleCard from "./SingleCard";
+import Timer from "./Timer";
 import cover from "../image/cover.png";
 import kitty from "../image/kitty.jpg";
 import kitty_2 from "../image/kitty-2.jpg";
@@ -7,8 +9,6 @@ import bangbang from "../image/bangbang.png";
 import bangbang_2 from "../image/bangbang-2.jpg";
 import normie from "../image/normie.png";
 import normie_2 from "../image/normie-2.jpg";
-import SingleCard from "./SingleCard";
-import Timer from "./Timer";
 
 const cardImages = [
   { src: kitty, matched: false },
