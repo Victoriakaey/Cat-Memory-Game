@@ -1,10 +1,10 @@
-import "./FadeInOut.css";
+import "./FadeInOutText.css";
 import { useEffect, useState } from "react";
 
 const fadeInterval = 2000;
 const wordChangeInterval = fadeInterval * 2;
 
-export default function FadeInOut({ words }) {
+export default function FadeInOutText({ words }) {
   const [fadeProp, setFadeProp] = useState("fade-in");
   const [wordOrder, setWordOrder] = useState(0);
 

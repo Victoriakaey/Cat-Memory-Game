@@ -26,7 +26,7 @@ function Game() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const [startTime, setStartTime] = useState(new Date());
-  const [difficulty, setDifficulty] = useState("");
+  const [difficulty, setDifficulty] = useState("beginner");
 
   function shuffleCards() {
     // Math.random() will return a random number from 0 to 1
@@ -91,10 +91,10 @@ function Game() {
     return matched / 2;
   }
 
-  function handleDifficultyChange(e) {
-    setDifficulty(e.target.value);
-    shuffleCards();
-  }
+  // function handleDifficultyChange(e) {
+  //   setDifficulty(e.target.value);
+  //   shuffleCards();
+  // }
 
   return (
     <div className="Game">
