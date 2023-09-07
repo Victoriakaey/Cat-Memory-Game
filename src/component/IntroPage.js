@@ -8,8 +8,14 @@ const words = [
 
 export default function IntroPage() {
   return (
-    <>
+    <div className="intropage">
       <Type words={words} />
-    </>
+      <button
+        className="intropage-button"
+        onClick={() => (window.location = "/preference")}
+      >
+        Preference
+      </button>
+    </div>
   );
 }

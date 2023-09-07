@@ -11,7 +11,7 @@ select {
     margin-left: 40px;
 }
 
-button {
+.game-button {
     background: none;
     border: 2px solid #DEDBEF;
     padding: 6px 12px;
@@ -23,7 +23,7 @@ button {
     margin-bottom: 40px;
 }
 
-button:hover {
+.game-button:hover {
     background: #c23866;
     color: #fff;
 }

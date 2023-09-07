@@ -99,13 +99,15 @@ function Game() {
   return (
     <div className="Game">
       <h1> Cat Memory Game </h1>
-      <button onClick={shuffleCards}> New Game </button>
-      <select value={difficulty} onChange={handleDifficultyChange}>
+      <button onClick={shuffleCards} className="game-button">
+        New Game
+      </button>
+      {/* <select value={difficulty} onChange={handleDifficultyChange}>
         <option value=""> </option>
         <option value="beginner">Beginner</option>
         <option value="intermediate">Intermediate</option>
         <option value="advance">Advance</option>
-      </select>
+      </select> */}
       <div className="card-grid">
         {cards.map((card) => (
           <SingleCard

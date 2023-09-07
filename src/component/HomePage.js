@@ -8,9 +8,8 @@ export default function HomePage() {
     // <IntroPage />
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<IntroPage />}>
-          <Route path="preference" element={<Game />} />
-        </Route>
+        <Route path="/" element={<IntroPage />} />
+        <Route path="/preference" element={<Game />} />
       </Routes>
     </BrowserRouter>
   );
