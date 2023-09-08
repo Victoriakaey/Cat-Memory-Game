@@ -30,7 +30,8 @@ To clone and run this web application, you will need [Git](https://git-scm.com/)
 - Adoption date: 2016/04/12
 - Gender: Female
     <!-- - Description: A sweet, smart, friendly and energetic cat, love the color blue and chicken. She will randomly twist her body, act crazy and run around the room. -->
-  ![Alt text](src/readmeImage/WechatIMG1602.jpg)
+
+![Alt text](src/readmeImage/kitty.jpg)
 
 #### Bangbang (2015/03/30 - 2021/06/25)
 
