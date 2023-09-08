@@ -94,6 +94,7 @@ export default function Timer({ startTime }) {
   return (
     <div className="timer">
       <h3> Count Down: {timer}</h3>
+      {localStorage.setItem("timer", timer)}
       {/* <h2>
         {timer === "00:00:00" ? checkWinOrLose() : "Count Down: " + timer}
       </h2> */}

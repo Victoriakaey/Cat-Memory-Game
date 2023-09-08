@@ -1,0 +1,23 @@
+.end {
+    color: #f0adff;
+    font-size: 50px;
+    height: 17em;
+    position: relative
+}
+
+.end-button {
+    margin-top: 25.2%;
+    position: relative;
+    background: none;
+    border: 2px solid #DEDBEF;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: #ee82d2;
+    cursor: pointer;
+    font-size: 0.4em;
+}
+
+.end-button:hover {
+    background: #c23866;
+    color: #fff;
+}

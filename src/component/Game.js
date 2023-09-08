@@ -44,6 +44,7 @@ function Game() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const [startTime, setStartTime] = useState(new Date());
+  const timer = localStorage.getItem("timer");
   const size = localStorage.getItem("size");
   let cardSize = 12;
   if (size) {
@@ -118,7 +119,18 @@ function Game() {
         matched += 1;
       }
     });
+    if (matched / 2 == cardSize / 2) {
+      localStorage.setItem("win", true);
+    } else {
+      localStorage.setItem("win", false);
+    }
     return matched / 2;
+  }
+
+  function handleEnd() {
+    if (getMatched() == cardSize / 2 || (timer == "00:00:00" && turns != 0)) {
+      window.location = "/end";
+    }
   }
 
   return (
@@ -144,6 +156,7 @@ function Game() {
         {" "}
         Turns: {turns} && Match: {getMatched()}
       </p>
+      {handleEnd()}
     </div>
   );
 }
