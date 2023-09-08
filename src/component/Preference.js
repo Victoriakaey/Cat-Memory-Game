@@ -1,3 +1,8 @@
+/* 
+    Author: Jiaqi Duan
+    Created on: 09/02/2023
+*/
+
 import "./Preference.css";
 import FadeInAnimation from "./FadeInAnimation";
 import Slider from "@mui/material-next/Slider";

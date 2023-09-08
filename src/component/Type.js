@@ -1,4 +1,9 @@
-// https://blog.logrocket.com/3-ways-implement-typing-animation-react/
+/* 
+    Author: Jiaqi Duan
+    Created on: 09/02/2023
+*/
+
+// Reference link: https://blog.logrocket.com/3-ways-implement-typing-animation-react/
 import { TypeAnimation } from "react-type-animation";
 import "./Type.css";
 

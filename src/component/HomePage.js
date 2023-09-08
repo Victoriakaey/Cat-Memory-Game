@@ -1,3 +1,8 @@
+/* 
+    Author: Jiaqi Duan
+    Created on: 09/02/2023
+*/
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IntroPage from "./IntroPage";
 import Game from "./Game";

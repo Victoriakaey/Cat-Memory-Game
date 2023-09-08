@@ -1,3 +1,8 @@
+/* 
+    Author: Jiaqi Duan
+    Created on: 09/02/2023
+*/
+
 import "./Game.css";
 import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";

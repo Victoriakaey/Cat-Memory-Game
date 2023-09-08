@@ -1,3 +1,8 @@
+/* 
+    Author: Jiaqi Duan
+    Created on: 09/02/2023
+*/
+
 import { useEffect, useRef, useState } from "react";
 import { PiClockCountdownDuotone } from "react-icons/pi"; // TODO: implement this in output
 // icon grab from : https://react-icons.github.io/react-icons
