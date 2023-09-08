@@ -2,7 +2,8 @@ import Type from "./Type";
 import "./EndPage.css";
 
 const win_words = [
-  "Congratulations! You win!!",
+  "Congratulations!",
+  "You win!!",
   "Click the button to play again.",
 ];
 
