@@ -25,14 +25,14 @@ To clone and run this web application, you will need [Git](https://git-scm.com/)
 
 ## Special Thanks to Kitty, Normie and Bangbang
 
-> Kitty (2014/03/31 - present)
->
-> - Adoption date: 2016/04/12
->
-> Bangbang (2015/03/30 - 2021/06/25)
->
-> - Adoption date: 2016/10/24
->
-> Normie (2022/05/16 - present)
->
-> - Adoption date: 2022/07/21
+### Kitty (2014/03/31 - present)
+
+    - Adoption date: 2016/04/12
+
+### Bangbang (2015/03/30 - 2021/06/25)
+
+    - Adoption date: 2016/10/24
+
+### Normie (2022/05/16 - present)
+
+    - Adoption date: 2022/07/21
