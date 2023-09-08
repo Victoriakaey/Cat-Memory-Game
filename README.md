@@ -23,7 +23,7 @@ To clone and run this web application, you will need [Git](https://git-scm.com/)
 
 ---
 
-## Special Thanks to Kitty, Normie and Bangbang
+## Special Thanks to Kitty, Bangbang and Normie
 
 #### Kitty (2014/03/31 - present)
 
