@@ -46,3 +46,5 @@ $ npm start
 - Gender: Female
 
 ![Alt text](src/readmeImage/normie.jpg)
+
+> Note: Started the project on 09/03/2023, and finished on 09/08/2023
