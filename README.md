@@ -14,11 +14,11 @@ The Cat Memory Game is a multi-page card matching game implemented with [React](
 To clone and run this web application, you will need [Git](https://git-scm.com/).
 
 ```
-    # To clone this repository
-    $ git clone https://github.com/Victoriakaey/Cat-Memory-Game.git
+# To clone this repository
+$ git clone https://github.com/Victoriakaey/Cat-Memory-Game.git
 
-    # Run the app
-    $ npm start
+# Run the app
+$ npm start
 ```
 
 ---
