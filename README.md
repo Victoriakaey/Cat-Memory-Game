@@ -2,7 +2,7 @@
 
 The Cat Memory Game is a multi-page card matching game implemented with [React](https://react.dev/). The game consists four pages:
 
-_Previews for all of the following pages can be found in the "Cat Memory Game Webpage Previews"_
+_Previews for all of the following pages can be found in the ["Cat Memory Game Webpage Previews"](https://github.com/Victoriakaey/Cat-Memory-Game/issues/1)_
 
 - _**Intro page**_, where it welcomes the user and prompted the user to click the button to go to the preference page.
 
