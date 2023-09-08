@@ -44,7 +44,11 @@ function Game() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const [startTime, setStartTime] = useState(new Date());
-  const cardSize = localStorage.getItem("size");
+  const size = localStorage.getItem("size");
+  let cardSize = 12;
+  if (size) {
+    cardSize = size;
+  }
 
   function shuffleCards() {
     let cardImages = [...cardImages_1];
@@ -55,7 +59,6 @@ function Game() {
     } else {
       cardImages = [...cardImages_3];
     }
-    console.log(cardSize);
     // Math.random() will return a random number from 0 to 1
     // When it's a negative number, the items will remain the same order
     // When it's a positive number, the items will get switch the order around

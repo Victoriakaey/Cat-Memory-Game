@@ -4,7 +4,11 @@ import { PiClockCountdownDuotone } from "react-icons/pi"; // TODO: implement thi
 export default function Timer({ startTime }) {
   const [timer, setTimer] = useState("00:00:00");
   const Ref = useRef(null);
-  const deadlineInMinutes = localStorage.getItem("time");
+  const time = localStorage.getItem("time");
+  let deadlineInMinutes = 1;
+  if (time) {
+    deadlineInMinutes = time;
+  }
 
   function getCurrentTime(total) {
     const seconds = Math.floor((total / 1000) % 60);
