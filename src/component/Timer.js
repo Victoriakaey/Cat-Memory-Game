@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { PiClockCountdownDuotone } from "react-icons/pi"; // TODO: implement this in output
+// icon grab from : https://react-icons.github.io/react-icons
 
 export default function Timer({ startTime }) {
   const [timer, setTimer] = useState("00:00:00");
@@ -83,21 +84,10 @@ export default function Timer({ startTime }) {
     clearTimer(getDeadTime());
   }, [startTime]);
 
-  // function checkWinOrLose() {
-  //   if (match === 6) {
-  //     return "Congratulations! You win!!";
-  //   } else {
-  //     return "You Lost!";
-  //   }
-  // }
-
   return (
     <div className="timer">
       <h3> Count Down: {timer}</h3>
       {localStorage.setItem("timer", timer)}
-      {/* <h2>
-        {timer === "00:00:00" ? checkWinOrLose() : "Count Down: " + timer}
-      </h2> */}
     </div>
   );
 }

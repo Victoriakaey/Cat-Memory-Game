@@ -3,12 +3,21 @@ import { TypeAnimation } from "react-type-animation";
 import "./Type.css";
 
 export default function Type({ words }) {
-  // TODO change it so that it's not hard-coded
-  // const
+  const word_interval = 1000;
+
+  function handleSequence() {
+    let sequence = [];
+    words.map((word) => {
+      sequence.push(word);
+      sequence.push(word_interval);
+    });
+    return sequence;
+  }
+
   return (
     <p className="type">
       <TypeAnimation
-        sequence={[words[0], 1000, words[1], 1000]}
+        sequence={handleSequence()}
         speed={50}
         style={{ fontSize: "1em" }}
       />
