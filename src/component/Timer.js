@@ -1,13 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { PiClockCountdownDuotone } from "react-icons/pi"; // TODO: implement this in output
 
-export default function Timer({ startTime, match, difficulty }) {
+export default function Timer({ startTime }) {
   const [timer, setTimer] = useState("00:00:00");
   const Ref = useRef(null);
-  // const deadlineInSeconds = 60;
-  const beginnerSeconds = 60;
-  const intermediateSeconds = 30;
-  const advancedSeconds = 10;
+  const deadlineInMinutes = localStorage.getItem("time");
 
   function getCurrentTime(total) {
     const seconds = Math.floor((total / 1000) % 60);
@@ -63,20 +60,9 @@ export default function Timer({ startTime, match, difficulty }) {
   function getDeadTime() {
     let deadline = new Date();
 
-    let deadlineSeconds = 0;
-
-    // "beginner" "intermediate" "advance"
-
-    if (difficulty === "beginner") {
-      deadlineSeconds = beginnerSeconds;
-    } else if (difficulty === "intermediate") {
-      deadlineSeconds = intermediateSeconds;
-    } else {
-      deadlineSeconds = advancedSeconds;
-    }
     // This is where you need to adjust if you entend to add more time
     // 60 = 1mins
-    deadline.setSeconds(deadline.getSeconds() + deadlineSeconds);
+    deadline.setSeconds(deadline.getSeconds() + deadlineInMinutes * 60);
     return deadline;
   }
 
@@ -93,19 +79,20 @@ export default function Timer({ startTime, match, difficulty }) {
     clearTimer(getDeadTime());
   }, [startTime]);
 
-  function checkWinOrLose() {
-    if (match === 6) {
-      return "Congratulations! You win!!";
-    } else {
-      return "You Lost!";
-    }
-  }
+  // function checkWinOrLose() {
+  //   if (match === 6) {
+  //     return "Congratulations! You win!!";
+  //   } else {
+  //     return "You Lost!";
+  //   }
+  // }
 
   return (
     <div className="timer">
-      <h2>
+      <h3> Count Down: {timer}</h3>
+      {/* <h2>
         {timer === "00:00:00" ? checkWinOrLose() : "Count Down: " + timer}
-      </h2>
+      </h2> */}
     </div>
   );
 }

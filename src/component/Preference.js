@@ -3,6 +3,14 @@ import FadeInAnimation from "./FadeInAnimation";
 import Slider from "@mui/material-next/Slider";
 
 export default function Preference() {
+  function valueSizeText(value) {
+    localStorage.setItem("size", value);
+  }
+
+  function valueTimeText(value) {
+    localStorage.setItem("time", value);
+  }
+
   return (
     <div className="preference">
       <FadeInAnimation
@@ -26,11 +34,12 @@ export default function Preference() {
           className="preference-slider"
           disabled={false}
           marks
-          max={24}
-          min={6}
-          step={6}
+          max={16}
+          min={8}
+          step={4}
           size="large"
           valueLabelDisplay="on"
+          getAriaValueText={valueSizeText}
         />
       </FadeInAnimation>
 
@@ -51,6 +60,7 @@ export default function Preference() {
           step={0.5}
           size="large"
           valueLabelDisplay="on"
+          getAriaValueText={valueTimeText}
         />
       </FadeInAnimation>
 
@@ -62,10 +72,11 @@ export default function Preference() {
       >
         <button
           className="preference-button"
-          onClick={() => (window.location = "/game")}
+          onClick={() => {
+            window.location = "/game";
+          }}
         >
-          {" "}
-          Start Game{" "}
+          Start Game
         </button>
       </FadeInAnimation>
     </div>

@@ -10,13 +10,31 @@ import bangbang_2 from "../image/bangbang-2.jpg";
 import normie from "../image/normie.png";
 import normie_2 from "../image/normie-2.jpg";
 
-const cardImages = [
+const cardImages_1 = [
+  { src: kitty, matched: false },
+  { src: bangbang, matched: false },
+  { src: normie, matched: false },
+  { src: kitty_2, matched: false }, // TODO: change this to another picture
+];
+
+const cardImages_2 = [
   { src: kitty, matched: false },
   { src: kitty_2, matched: false },
   { src: bangbang, matched: false },
   { src: bangbang_2, matched: false },
   { src: normie, matched: false },
   { src: normie_2, matched: false },
+];
+
+const cardImages_3 = [
+  { src: kitty, matched: false },
+  { src: kitty_2, matched: false },
+  { src: bangbang, matched: false },
+  { src: bangbang_2, matched: false },
+  { src: normie, matched: false },
+  { src: normie_2, matched: false },
+  { src: bangbang, matched: false }, // TODO: change this to another picture
+  { src: bangbang_2, matched: false }, // TODO: change this to another picture
 ];
 
 function Game() {
@@ -26,9 +44,18 @@ function Game() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const [startTime, setStartTime] = useState(new Date());
-  const [difficulty, setDifficulty] = useState("beginner");
+  const cardSize = localStorage.getItem("size");
 
   function shuffleCards() {
+    let cardImages = [...cardImages_1];
+    if (cardSize == 8) {
+      cardImages = [...cardImages_1];
+    } else if (cardSize == 12) {
+      cardImages = [...cardImages_2];
+    } else {
+      cardImages = [...cardImages_3];
+    }
+    console.log(cardSize);
     // Math.random() will return a random number from 0 to 1
     // When it's a negative number, the items will remain the same order
     // When it's a positive number, the items will get switch the order around
@@ -91,23 +118,12 @@ function Game() {
     return matched / 2;
   }
 
-  // function handleDifficultyChange(e) {
-  //   setDifficulty(e.target.value);
-  //   shuffleCards();
-  // }
-
   return (
     <div className="Game">
       <h1> Cat Memory Game </h1>
       <button onClick={shuffleCards} className="game-button">
         New Game
       </button>
-      {/* <select value={difficulty} onChange={handleDifficultyChange}>
-        <option value=""> </option>
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advance">Advance</option>
-      </select> */}
       <div className="card-grid">
         {cards.map((card) => (
           <SingleCard
@@ -120,11 +136,7 @@ function Game() {
           />
         ))}
       </div>
-      <Timer
-        startTime={startTime}
-        match={getMatched()}
-        difficulty={difficulty}
-      />
+      <Timer startTime={startTime} match={getMatched()} />
       <p>
         {" "}
         Turns: {turns} && Match: {getMatched()}
