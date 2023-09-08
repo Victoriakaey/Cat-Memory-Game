@@ -10,7 +10,7 @@ const lost_words = ["You lost!", "Click the button to try again."];
 
 export default function EndPage() {
   const timer = localStorage.getItem("timer");
-  const win = localStorage.getItem("win");
+  const win = localStorage.getItem("win") === "true";
 
   return (
     <div className="end">

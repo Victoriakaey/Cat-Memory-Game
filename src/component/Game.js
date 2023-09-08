@@ -5,16 +5,18 @@ import Timer from "./Timer";
 import cover from "../image/cover.png";
 import kitty from "../image/kitty.jpg";
 import kitty_2 from "../image/kitty-2.jpg";
+import kitty_3 from "../image/kitty-3.jpg";
 import bangbang from "../image/bangbang.png";
 import bangbang_2 from "../image/bangbang-2.jpg";
 import normie from "../image/normie.png";
 import normie_2 from "../image/normie-2.jpg";
+import normie_3 from "../image/normie-3.jpeg";
 
 const cardImages_1 = [
   { src: kitty, matched: false },
   { src: bangbang, matched: false },
   { src: normie, matched: false },
-  { src: kitty_2, matched: false }, // TODO: change this to another picture
+  { src: kitty_2, matched: false },
 ];
 
 const cardImages_2 = [
@@ -33,8 +35,8 @@ const cardImages_3 = [
   { src: bangbang_2, matched: false },
   { src: normie, matched: false },
   { src: normie_2, matched: false },
-  { src: bangbang, matched: false }, // TODO: change this to another picture
-  { src: bangbang_2, matched: false }, // TODO: change this to another picture
+  { src: normie_3, matched: false },
+  { src: kitty_3, matched: false },
 ];
 
 function Game() {
@@ -119,7 +121,7 @@ function Game() {
         matched += 1;
       }
     });
-    if (matched / 2 == cardSize / 2) {
+    if (matched == cardSize) {
       localStorage.setItem("win", true);
     } else {
       localStorage.setItem("win", false);
