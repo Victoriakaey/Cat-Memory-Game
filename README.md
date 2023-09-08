@@ -47,4 +47,4 @@ $ npm start
 
 ![Alt text](src/readmeImage/normie.jpg)
 
-> Note: Started the project on 09/03/2023, and finished on 09/08/2023
+> Note: This is my first front-end webpage project ever made. I started learning HTML & CSS on 08/11/2023, and started learning React on 08/30/2023. I started the project on 09/03/2023, and finished it on 09/08/2023.
