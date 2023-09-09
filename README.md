@@ -4,11 +4,28 @@ The Cat Memory Game is a multi-page card matching game implemented with [React](
 
 _Previews for all of the following pages can be found in the ["Cat Memory Game Webpage Previews"](https://github.com/Victoriakaey/Cat-Memory-Game/issues/1)_
 
-- _**Intro page**_, where it welcomes the user and prompted the user to click the button to go to the preference page.
+- _**Intro page**_:
 
-- _**Preference page**_, where it allows user to select the size of the card deck, and the count down time limits. The user get to mix and match the size and count down time, making it a more user friendly game.
-- _**Game page**_, where the user can play the cat memory card game with my beloved cats, Kitty, Normie, and Bangbang. The user can see the current count down time, their current total card turns, and their current match in real time. The user can also press the "New Game" button, if they want to restart the game.
-- _**End page**_. This will only show when the user take at least one turn in the game. If the user haven't finished the game, a.k.a, won the card game, the page will show a message saying that the user lost, and they can click the button to try again. However, if they won, they will see a message saying that they win, and if they want to, they can click the button to play again.
+  - Welcome user to the page.
+  - Prompt user to click the button to go to the preference page.
+
+- _**Preference page**_:
+
+  - Prompt user to select:
+    - Card deck size.
+    - Count down time limits.
+  - Allow user to mix and match, making it a more user-friendly game.
+
+- _**Game page**_:
+
+  - The actual card game page with the preference proporties chosen by the user.
+  - The user can see the current count down time, the current total card turns, and the current match scores.
+  - The user can also press the "New Game" button, if they want to restart the game.
+
+- _**End page**_:
+
+  - If the user haven't finished the game - lost the card matching game, the page will show a message saying that the user lost, and they can click the button to try again.
+  - If the user won the card matching game, they will see a message saying that they win, and if they want to, they can click the button to play again.
 
 ---
 
