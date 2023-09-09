@@ -20,7 +20,8 @@ _Previews for all of the following pages can be found in the ["Cat Memory Game W
 
   - The actual card game page with the preference proporties chosen by the user.
   - The user can see the current count down time, the current total card turns, and the current match scores.
-  - The user can also press the "New Game" button, if they want to restart the game.
+  - The user can press the "New Game" button, if they want to restart the game.
+  - The user can press the arrow on the bottom right to reset preference.
 
 - _**End page**_:
 

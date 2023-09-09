@@ -4,6 +4,7 @@
 */
 
 import "./Game.css";
+import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";
 import Timer from "./Timer";
@@ -55,14 +56,14 @@ function Game() {
   const size = localStorage.getItem("size");
   let cardSize = 12;
   if (size) {
-    cardSize = size;
+    cardSize = parseInt(size);
   }
 
   function shuffleCards() {
     let cardImages = [...cardImages_1];
-    if (cardSize == 8) {
+    if (cardSize === 8) {
       cardImages = [...cardImages_1];
-    } else if (cardSize == 12) {
+    } else if (cardSize === 12) {
       cardImages = [...cardImages_2];
     } else {
       cardImages = [...cardImages_3];
@@ -164,6 +165,12 @@ function Game() {
         Turns: {turns} && Match: {getMatched()}
       </p>
       {handleEnd()}
+      <button
+        className="fixed-button"
+        onClick={() => (window.location = "/preference")}
+      >
+        <IoIosArrowDropleftCircle />
+      </button>
     </div>
   );
 }

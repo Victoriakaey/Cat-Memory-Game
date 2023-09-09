@@ -41,3 +41,19 @@ select {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
 }
+
+.fixed-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: none;
+    border: 2px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.fixed-button:hover {
+    color: #fff;
+}
